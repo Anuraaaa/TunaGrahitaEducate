@@ -65,6 +65,7 @@
   color: white;
   text-decoration: none;
   font-weight: 600;
+  cursor: pointer;
 }
 
 .navbar-content a:hover{

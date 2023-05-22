@@ -1,6 +1,6 @@
-export default function MidLayout1 () {
+export default function MidLayout1 ({about}) {
     return (
-        <div className="midlayout1">
+        <div className="midlayout1" ref={about}>
             <h1>Tuna Grahita Educate</h1>
             <p>
                 Selamat datang di website pembelajaran khusus untuk anak-anak tunadaksa, tempat dimana pembelajaran

@@ -1,6 +1,6 @@
-export default function MidLayout2() {
+export default function MidLayout2({guide}) {
     return (
-        <div className="midlayout2">
+        <div className="midlayout2" ref={guide}>
             <h1>Guide</h1>
             <ul>
                 <li>

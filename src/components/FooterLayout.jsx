@@ -1,6 +1,6 @@
-export default function FooterLayout() {
+export default function FooterLayout({materi}) {
     return (
-        <div className="footerlayout">
+        <div className="footerlayout" ref={materi}>
             <h1>Materi</h1>
             <div className="materi-container">
                 <div className="rounded1">Membaca</div>

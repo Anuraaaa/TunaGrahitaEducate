@@ -1,11 +1,14 @@
-export default function Navbar () {
+export default function Navbar ({about, guide, materi}) {
+    const scrolltoAbout = () => about.current?.scrollIntoView();
+    const scrolltoGuide = () => guide.current?.scrollIntoView();
+    const scrolltoMateri = () => materi.current?.scrollIntoView();
     return (
         <nav className="navbar">
-            <a href="#" className="navbar-title">Tuna Grahita Educate</a>
+            <a className="navbar-title" href="#">Tuna Grahita Educate</a>
             <ul className="navbar-content">
-                <li><a href="#">About</a></li>
-                <li><a href="#">Guide</a></li>
-                <li><a href="#">Materi</a></li>
+                <li><a onClick={scrolltoAbout}>About</a></li>
+                <li><a onClick={scrolltoGuide}>Guide</a></li>
+                <li><a onClick={scrolltoMateri}>Materi</a></li>
             </ul>
         </nav>
     )
