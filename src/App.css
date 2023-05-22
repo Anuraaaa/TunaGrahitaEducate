@@ -1,0 +1,260 @@
+/* .App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
+
+/* Navbar Start */
+
+.navbar {
+  display: flex;
+  background-color: #146C93;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px;
+}
+
+.navbar-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 4rem;
+  margin-right: 14rem;
+}
+
+.navbar-content li {
+  list-style: none;
+}
+
+.navbar-content a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.navbar-content a:hover{
+  background-color: #125c7c;
+  padding: 12px;
+  border-radius: 10px;
+}
+
+.navbar-title{
+  display: flex;
+  align-items: center;
+  margin-left: 8rem;
+  font-weight: 700;
+  font-size: x-large;
+  color: white;
+}
+
+.navbar-title:hover{
+  background-color: #125c7c;
+  border-radius: 10px;
+  cursor: default;
+  padding: 8px 16px;
+}
+
+/* Navbar End */
+
+/* Top Layout Start */
+
+.toplayout {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #146C93;
+  padding: 24px;
+  padding-top: 4rem;
+  min-height: 80vh;
+}
+
+.toplayout h1, p{
+  color: white;
+}
+
+.toplayout-text {
+  position: relative;
+  left: 10%;
+  width: 23%;
+}
+
+.toplayout-img {
+  position: relative;
+  right: 20%;
+}
+
+.btn {
+  margin-top: 2rem;
+  padding: 16px 32px;
+  background-color: #19A7CD;
+  border: none;
+  border-radius: 10px;
+  color: white;
+}
+
+.btn:hover {
+  background-color: #178fb1;
+  padding: 18px 34px;
+  cursor: pointer;
+}
+
+/* Top Layout End */
+
+.circle {
+  background-color: #F6F882;
+  height: 200px;
+  width: 200px;
+  border-radius: 180px;
+  margin-top: 2rem;
+}
+
+/* Mid Layout1 Start */
+
+.midlayout1 {
+  display: flex;
+  flex-direction: column;
+  background-color: #19A7CD;
+  padding: 4rem 12rem;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+/* Mid Layout1 End */
+
+/* Mid Layout2 Start */
+
+.midlayout2 {
+  display: flex;
+  flex-direction: column;
+  background-color: #146C93;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 12rem;
+  color: white;
+}
+
+.midlayout2 li {
+  list-style-type: decimal;
+}
+
+/* Mid Layout2 End */
+
+/* Footer Layout Start */
+
+.footerlayout {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: #19A7CD;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 12rem;
+  color: white;
+  gap: 2rem;
+}
+
+.materi-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: #19A7CD;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;  
+}
+
+.rounded1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #146C93;
+  height: 200px;
+  width: 150px;
+  border-radius: 20px;
+  color: white;
+  font-weight: 800;
+}
+
+.rounded1:hover {
+  background-color: #1b86b4;
+  cursor: pointer;
+  height: 210px;
+  width: 160px;
+}
+
+.rounded2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #146C93;
+  height: 200px;
+  width: 150px;
+  border-radius: 20px;
+  color: white;
+  font-weight: 800;
+  text-align: center;
+}
+
+.rounded2:hover {
+  background-color: #1b86b4;
+  cursor: pointer;
+  height: 210px;
+  width: 160px;
+}
+
+.rounded3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #146C93;
+  height: 200px;
+  width: 150px;
+  border-radius: 20px;
+  color: white;
+  font-weight: 800;
+}
+
+.rounded3:hover {
+  background-color: #1b86b4;
+  cursor: pointer;
+  height: 210px;
+  width: 160px;
+}
+
+/* Footer Layout End */
