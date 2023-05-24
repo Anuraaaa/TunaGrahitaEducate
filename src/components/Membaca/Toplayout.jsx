@@ -9,7 +9,7 @@ export default function TopLayout () {
                 <div className="toplayout-text">
                     <h1>Selamat datang di materi membaca</h1>
                     <p>Mari membaca dengan mengenal nama nama buah</p>
-                    <Link to={"/gamemembaca"}>
+                    <Link to={"/membaca/game"}>
                         <button className='btn'>Mulai</button>
                     </Link>
                 </div>

@@ -18,6 +18,7 @@ export default function Main() {
     const [fruit, setFruit] = useState([]);
     const [fruitImg, setFruitImg] = useState([]);
     const [fruitImgPutus, setFruitImgPutus] = useState([]);
+    const [currentState, setCurrentState] = useState();
 
     const randomUniqueNumber = (range, count) => {
         let nums = new Set();
@@ -29,6 +30,7 @@ export default function Main() {
 
     useEffect(() => {
         let a = Math.floor(Math.random() * 5);
+        setCurrentState(a);
         setFruit(fruitName[a]);
         setFruitImg(fruitListImg[a]);
         setFruitImgPutus(fruitListImgPutus[a]);
@@ -49,10 +51,15 @@ export default function Main() {
                     </div>
                 </div>
                 <button onClick={() => {
-                    let a = randomUniqueNumber(5, 5); 
-                    setFruit(fruitName[a]);
-                    setFruitImg(fruitListImg[a]);
-                    setFruitImgPutus(fruitListImgPutus[a]);}}
+                    if (currentState >= 4) {
+                        window.location = "/membaca/finish";
+                    }
+                    else {
+                        let a = randomUniqueNumber(5, 5);
+                        setFruit(fruitName[a]);
+                        setFruitImg(fruitListImg[a]);
+                        setFruitImgPutus(fruitListImgPutus[a]);
+                    }}}
                     >Next</button>
             </div>
         </div>
