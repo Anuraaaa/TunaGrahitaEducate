@@ -39,6 +39,10 @@
 
 /* Navbar Start */
 
+* {
+  scroll-behavior: smooth;
+}
+
 .navbar {
   display: flex;
   background-color: #146C93;
@@ -93,12 +97,14 @@
 
 /* Navbar End */
 
+/* Homepage Start */
+
 /* Top Layout Start */
 
 .toplayout {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   background-color: #146C93;
   padding: 24px;
   padding-top: 4rem;
@@ -110,14 +116,14 @@
 }
 
 .toplayout-text {
-  position: relative;
-  left: 10%;
   width: 23%;
 }
 
 .toplayout-img {
-  position: relative;
-  right: 20%;
+  background-color: #F6F882;
+  width: 30%;
+  height: 30%;
+  border-radius: 240px;
 }
 
 .btn {
@@ -136,14 +142,6 @@
 }
 
 /* Top Layout End */
-
-.circle {
-  background-color: #F6F882;
-  height: 200px;
-  width: 200px;
-  border-radius: 180px;
-  margin-top: 2rem;
-}
 
 /* Mid Layout1 Start */
 
@@ -203,15 +201,29 @@
 
 .rounded1 {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: #146C93;
   height: 200px;
   width: 150px;
   border-radius: 20px;
+}
+
+.rounded1 img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.rounded1 p {
   color: white;
   font-weight: 800;
+  position: relative;
+  bottom: 10%;
 }
+
 
 .rounded1:hover {
   background-color: #1b86b4;
@@ -222,15 +234,27 @@
 
 .rounded2 {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: #146C93;
   height: 200px;
   width: 150px;
   border-radius: 20px;
+}
+
+.rounded2 p {
   color: white;
   font-weight: 800;
-  text-align: center;
+  text-align: center;  
+  position: relative;
+  bottom: 10%;
+}
+
+.rounded2 img {
+  width: 100%;
+  position: relative;
+  top: 5%;
 }
 
 .rounded2:hover {
@@ -244,12 +268,22 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   background-color: #146C93;
   height: 200px;
   width: 150px;
   border-radius: 20px;
+}
+
+.rounded3 p {
   color: white;
-  font-weight: 800;
+  font-weight: 800; 
+  position: relative;
+  bottom: 10%; 
+}
+
+.rounded3 img {
+  width: 100%;
 }
 
 .rounded3:hover {
@@ -260,3 +294,5 @@
 }
 
 /* Footer Layout End */
+
+/* Homepage End */

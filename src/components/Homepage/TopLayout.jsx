@@ -1,3 +1,5 @@
+import kidsimg from '../../asset/img/kids.png'
+
 export default function TopLayout ({materi}) {
     const scrolltoMateri = () => materi.current?.scrollIntoView();
     return (
@@ -7,9 +9,7 @@ export default function TopLayout ({materi}) {
                 <p>Media yang membantu dalam hal pendidikan, untuk anak berkebutuhan khusus</p>
                 <button className="btn" onClick={scrolltoMateri}>Mulai</button>
             </div>
-            <div className="toplayout-img">
-                <div className="circle"></div>
-            </div>
+            <img src={kidsimg} alt="" className='toplayout-img' />
         </div>
     )
 }
