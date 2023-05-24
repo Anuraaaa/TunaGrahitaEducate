@@ -1,24 +1,16 @@
-import { useRef } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
-import Navbar from './components/Navbar';
-import TopLayout from './components/Homepage/TopLayout';
-import MidLayout1 from './components/Homepage/MidLayout1';
-import MidLayout2 from './components/Homepage/MidLayout2';
-import FooterLayout from './components/Homepage/FooterLayout';
+import Homepage from './Pages/Homepage';
+import MembacaPage from './Pages/MembacaPage';
 
 function App() {
-  const about = useRef(null);
-  const guide = useRef(null);
-  const materi = useRef(null);
-
   return (
-    <>
-      <Navbar about={about} guide={guide} materi={materi}/>
-      <TopLayout materi={materi}/>
-      <MidLayout1 about={about}/>
-      <MidLayout2 guide={guide}/>
-      <FooterLayout materi={materi}/>
-    </>
+    <Router>
+      <Routes>
+          <Route path='/' element={<Homepage/>}/>
+          <Route path='/membaca' element={<MembacaPage/>}/>
+      </Routes>
+    </Router>
   )
 }
 
