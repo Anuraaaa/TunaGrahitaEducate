@@ -1,7 +1,11 @@
+import Navbar from "../components/Membaca/Navbar";
+import TopLayout from "../components/Membaca/Toplayout";
+
 export default function MembacaPage() {
     return (
         <>
-            <h1>Tes</h1>
+            <Navbar/>
+            <TopLayout/>
         </>
     )
 }

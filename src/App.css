@@ -40,6 +40,8 @@
 /* Navbar Start */
 
 * {
+  padding: 0;
+  margin: 0;
   scroll-behavior: smooth;
 }
 
@@ -296,3 +298,80 @@
 /* Footer Layout End */
 
 /* Homepage End */
+
+/* Gamemembaca Start */
+
+.gamemembaca {
+  background-color: #146C93;
+  height: 100vh;  
+}
+
+.gamemembaca-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.gamemembaca-container button {
+  padding: 16px;
+  margin: 8px 32rem;
+  background-color: #7bc6e6;
+  border-radius: 80px;
+  border: 0px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.gamemembaca-container button:hover {
+  padding: 18px;
+  margin: 8px 31rem;
+  background-color: #4fbae7;
+  border-radius: 80px;
+  border: 0px;
+  cursor: pointer;
+}
+
+.gamemembaca-wrapper {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 10%;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  margin-left: 8rem;
+  margin-right: 8rem;
+  border-radius: 45px;
+}
+
+.gamemembaca-wrap1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.gamemembaca-wrap1 img {
+  width: 15%;
+}
+
+.gamemembaca-wrap1 h1 {
+  font-size: 4rem;
+}
+
+.gamemembaca-wrap2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.gamemembaca-wrap2 img {
+  width: 15%;
+}
+
+.gamemembaca-wrap2 .text {
+  width: 25%;
+}
