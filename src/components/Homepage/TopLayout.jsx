@@ -1,7 +1,18 @@
 import kidsimg from '../../asset/img/kids.png'
+import srcAudio from "../../asset/lagu.mp3"
 
 export default function TopLayout ({materi}) {
     const scrolltoMateri = () => materi.current?.scrollIntoView();
+
+    const audio = new Audio();
+    document.body.addEventListener("click", function() {
+        audio.load();    
+        audio.src = srcAudio;
+        audio.autoplay = true;
+        audio.loop = true;
+        audio.play();
+    })
+
     return (
         <div className="toplayout">
             <div className="toplayout-text">
