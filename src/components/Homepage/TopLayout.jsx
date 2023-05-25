@@ -1,17 +1,22 @@
 import kidsimg from '../../asset/img/kids.png'
-import srcAudio from "../../asset/lagu.mp3"
+// import srcAudio from "../../asset/lagu.mp3"
 
 export default function TopLayout ({materi}) {
     const scrolltoMateri = () => materi.current?.scrollIntoView();
 
-    const audio = new Audio();
-    audio.load();    
-    audio.src = srcAudio;
-    audio.autoplay = true;
-    audio.loop = true;
-    document.body.addEventListener("click", function() {
-        audio.play();
-    })
+    // const audio = new Audio();
+    // let audioState = false;
+    
+    // document.body.addEventListener("click", function() {
+    //     if (!audioState) {
+    //         audioState = true;
+    //         audio.load();    
+    //         audio.src = srcAudio;
+    //         audio.autoplay = true;
+    //         audio.loop = true;
+    //         audio.play();
+    //     }
+    // })
 
     return (
         <div className="toplayout">

@@ -1,14 +1,11 @@
 import { Link } from 'react-router-dom'
 import appleimg from '../../asset/img/apple.png'
-import srcAudio from "../../asset/lagu.mp3"
+// import srcAudio from "../../asset/lagu.mp3"
 
 
 export default function TopLayout () {
-    const audio = new Audio();
-    audio.load();    
-    audio.src = srcAudio;
-    audio.autoplay = true;
-    audio.loop = true;
+    // const audio = new Audio();
+
     return (
         <>
             <div className="toplayout">
@@ -17,7 +14,11 @@ export default function TopLayout () {
                     <p>Mari membaca dengan mengenal nama nama buah</p>
                     <Link to={"/membaca/game"}>
                         <button className='btn' onClick={() => {
-                            audio.play();
+                            // audio.load();    
+                            // audio.src = srcAudio;
+                            // audio.autoplay = true;
+                            // audio.loop = true;
+                            // audio.play();
                         }}>Mulai</button>
                     </Link>
                 </div>
