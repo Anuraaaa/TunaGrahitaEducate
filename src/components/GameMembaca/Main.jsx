@@ -9,6 +9,7 @@ import mangoputus from "../../asset/img/mangoputus.png";
 import ceri from "../../asset/img/ceri.png";
 import ceriputus from "../../asset/img/ceriputus.png";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Main() {
 
@@ -19,6 +20,7 @@ export default function Main() {
     const [fruitImg, setFruitImg] = useState([]);
     const [fruitImgPutus, setFruitImgPutus] = useState([]);
     const [currentState, setCurrentState] = useState();
+    const navigate = useNavigate();
 
     const randomUniqueNumber = (range, count) => {
         let nums = new Set();
@@ -52,7 +54,7 @@ export default function Main() {
                 </div>
                 <button onClick={() => {
                     if (currentState >= 4) {
-                        window.location = "/membaca/finish";
+                        navigate("/membaca/finish");
                     }
                     else {
                         let a = randomUniqueNumber(5, 5);
