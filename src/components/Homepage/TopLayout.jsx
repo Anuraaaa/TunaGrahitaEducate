@@ -5,11 +5,11 @@ export default function TopLayout ({materi}) {
     const scrolltoMateri = () => materi.current?.scrollIntoView();
 
     const audio = new Audio();
+    audio.load();    
+    audio.src = srcAudio;
+    audio.autoplay = true;
+    audio.loop = true;
     document.body.addEventListener("click", function() {
-        audio.load();    
-        audio.src = srcAudio;
-        audio.autoplay = true;
-        audio.loop = true;
         audio.play();
     })
 
