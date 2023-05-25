@@ -375,3 +375,62 @@
 .gamemembaca-wrap2 .text {
   width: 25%;
 }
+
+/* Gamemembaca End */
+
+
+/* Gamemenyanyi Start */
+.gamemenyanyi {
+  background-color: #146C93;
+  height: 100vh;    
+}
+
+.gamemenyanyi-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 5%;
+  gap: 2rem;
+}
+
+.gamemenyanyi-container button {
+  padding: 16px;
+  margin: 8px 32rem;
+  background-color: #7bc6e6;
+  border-radius: 80px;
+  border: 0px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.gamemenyanyi-container button:hover {
+  padding: 18px;
+  margin: 8px 31rem;
+  background-color: #4fbae7;
+  border-radius: 80px;
+  border: 0px;
+  cursor: pointer;
+}
+
+.gamemenyanyi-wrapper {
+  display: flex;
+  background-color: white;
+  border: 12px solid black;
+  justify-content: center;
+  align-items: center;
+  padding-top: 12rem;
+  padding-bottom: 12rem;
+  margin-left: 12rem;
+  margin-right: 12rem;
+  border-radius: 45px;  
+  position: relative;
+}
+
+.gamemenyanyi-wrapper iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 45px;
+}
+
+/* Gamemenyanyi End */

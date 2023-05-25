@@ -6,6 +6,9 @@ import { useEffect } from 'react';
 import GameMembaca from './Pages/GameMembaca';
 import FinishMembaca from './Pages/FinishMembaca';
 import MenyanyidanMenari from './Pages/MenyanyidanMenari';
+import GameMenyanyidanMenari from './Pages/GameMenanyidanMenari';
+import FinishMenyanyidanMenari from './Pages/FinishMenyanyidanMenari';
+import Berhitung from './Pages/Berhitung';
 
 function App() {
 
@@ -20,6 +23,9 @@ return (
           <Route path='/membaca/game' element={<GameMembaca/>}/>
           <Route path='/membaca/finish' element={<FinishMembaca/>}/>
           <Route path='/menyanyimenari/' element={<MenyanyidanMenari/>}/>
+          <Route path='/menyanyimenari/game' element={<GameMenyanyidanMenari/>}/>
+          <Route path='/menyanyimenari/finish' element={<FinishMenyanyidanMenari/>}/>
+          <Route path='/berhitung' element={<Berhitung/>}/>
       </Routes>
     </Router>
   )

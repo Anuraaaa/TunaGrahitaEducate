@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import singer from '../../asset/img/singer.png';
+import finishimg from '../../asset/img/finish.png';
 
 
 export default function TopLayout () {
@@ -7,13 +7,13 @@ export default function TopLayout () {
         <>
             <div className="toplayout">
                 <div className="toplayout-text">
-                    <h1>Selamat Datang di materi bernyanyi dan menari</h1>
-                    <p>Mari bernyanyi dan menari dengan melihat cuplikan video!</p>
-                    <Link to={"/menyanyimenari/game"}>
+                    <h1>Kamu berhasil</h1>
+                    <p>Ayo pelajari materi selanjutnya!</p>
+                    <Link to={"/berhitung"}>
                         <button className='btn'>Mulai</button>
                     </Link>
                 </div>
-                <img src={singer} alt="" className='toplayout-img' />
+                <img src={finishimg} alt="" className='toplayout-img' />
             </div>
         </>
     )

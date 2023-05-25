@@ -31,11 +31,13 @@ export default function Main() {
     }
 
     useEffect(() => {
-        let a = Math.floor(Math.random() * 5);
-        setCurrentState(a);
-        setFruit(fruitName[a]);
-        setFruitImg(fruitListImg[a]);
-        setFruitImgPutus(fruitListImgPutus[a]);
+        setTimeout(function() {
+            let a = Math.floor(Math.random() * 5);
+            setCurrentState(a);
+            setFruit(fruitName[a]);
+            setFruitImg(fruitListImg[a]);
+            setFruitImgPutus(fruitListImgPutus[a]);
+        }, 1)
     });
 
 

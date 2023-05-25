@@ -14,6 +14,7 @@ export default function TopLayout () {
                     <p>Mari membaca dengan mengenal nama nama buah</p>
                     <Link to={"/membaca/game"}>
                         <button className='btn' onClick={() => {
+                            window.scrollTo(0, 0);
                             // audio.load();    
                             // audio.src = srcAudio;
                             // audio.autoplay = true;

@@ -12,14 +12,14 @@ export default function FooterLayout({materi}) {
                     <img src={book} alt="" />
                     <p>Membaca</p>
                 </Link>
-                <div className="rounded2">
+                <Link className="rounded2" to={"/menyanyimenari"} onClick={() => {window.scrollTo(0, 0)}}>
                     <img src={singer} alt="" />
                     <p>Bernyanyi dan Menari</p>
-                </div>
-                <div className="rounded3">
+                </Link>
+                <Link className="rounded3" to={"/berhitung"} onClick={() => {window.scrollTo(0, 0)}}>
                     <img src={calculer} alt="" />
                     <p>Berhitung</p>
-                </div>
+                </Link>
             </div>
         </div>
     )
