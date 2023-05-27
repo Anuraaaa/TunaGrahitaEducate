@@ -10,7 +10,7 @@ export default function TopLayout () {
                     <h1>Selamat Datang di materi bernyanyi dan menari</h1>
                     <p>Mari bernyanyi dan menari dengan melihat cuplikan video!</p>
                     <Link to={"/menyanyimenari/game"}>
-                        <button className='btn'>Mulai</button>
+                        <button className='btn animation-bouncetobtm'>Mulai</button>
                     </Link>
                 </div>
                 <img src={singer} alt="" className='toplayout-img' />

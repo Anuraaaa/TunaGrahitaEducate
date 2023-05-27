@@ -1,11 +1,7 @@
 import { Link } from 'react-router-dom'
 import appleimg from '../../asset/img/apple.png'
-// import srcAudio from "../../asset/lagu.mp3"
 
-
-export default function TopLayout () {
-    // const audio = new Audio();
-
+export default function TopLayout ({audio1}) {
     return (
         <>
             <div className="toplayout">
@@ -13,13 +9,10 @@ export default function TopLayout () {
                     <h1>Selamat datang di materi membaca</h1>
                     <p>Mari membaca dengan mengenal nama nama buah</p>
                     <Link to={"/membaca/game"}>
-                        <button className='btn' onClick={() => {
+                        <button className='btn animation-bouncetobtm' onClick={() => {
                             window.scrollTo(0, 0);
-                            // audio.load();    
-                            // audio.src = srcAudio;
-                            // audio.autoplay = true;
-                            // audio.loop = true;
-                            // audio.play();
+                            audio1.load();
+                            audio1.play();
                         }}>Mulai</button>
                     </Link>
                 </div>

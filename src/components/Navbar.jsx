@@ -4,8 +4,8 @@ export default function Navbar ({about, guide, materi}) {
     const scrolltoMateri = () => materi.current?.scrollIntoView();
     return (
         <nav className="navbar">
-            <a className="navbar-title" href="#">Tuna Grahita Educate</a>
-            <ul className="navbar-content">
+            <a className="navbar-title animation-bounce" href="#">Tuna Grahita Educate</a>
+            <ul className="navbar-content animation-pulse">
                 <li><a onClick={scrolltoAbout}>About</a></li>
                 <li><a onClick={scrolltoGuide}>Guide</a></li>
                 <li><a onClick={scrolltoMateri}>Materi</a></li>

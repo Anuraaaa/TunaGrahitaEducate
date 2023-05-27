@@ -11,7 +11,7 @@ import ceriputus from "../../asset/img/ceriputus.png";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-export default function Main() {
+export default function Main({audio1, sound1, sound2}) {
 
     const fruitName = ["A-p-e-l", "P-i-s-a-n-g", "A-n-g-g-u-r", "M-a-n-g-g-a", "C-e-r-i"];
     const fruitListImg = [appleimg, banana, purple, mango, ceri];
@@ -19,8 +19,10 @@ export default function Main() {
     const [fruit, setFruit] = useState([]);
     const [fruitImg, setFruitImg] = useState([]);
     const [fruitImgPutus, setFruitImgPutus] = useState([]);
-    const [currentState, setCurrentState] = useState();
     const navigate = useNavigate();
+    localStorage.clear();
+    const storageCount = Number(localStorage.getItem("count")) ?? 0;
+    const [count, setCount] = useState(storageCount);
 
     const randomUniqueNumber = (range, count) => {
         let nums = new Set();
@@ -33,7 +35,6 @@ export default function Main() {
     useEffect(() => {
         setTimeout(function() {
             let a = Math.floor(Math.random() * 5);
-            setCurrentState(a);
             setFruit(fruitName[a]);
             setFruitImg(fruitListImg[a]);
             setFruitImgPutus(fruitListImgPutus[a]);
@@ -46,16 +47,22 @@ export default function Main() {
             <div className="gamemembaca-container">
                 <div className="gamemembaca-wrapper">
                     <div className="gamemembaca-wrap1">
-                            <img src={fruitImg} alt="" />
-                            <h1>{fruit}</h1>
+                        <img src={fruitImg} alt="" />
+                        <h1>{fruit}</h1>
                     </div>
                     <div className="gamemembaca-wrap2">
                         <img src={fruitImg} alt=""/>
                         <img src={fruitImgPutus} alt="" className="text" />
                     </div>
                 </div>
-                <button onClick={() => {
-                    if (currentState >= 4) {
+                <button className="animation-bounce" onClick={() => {
+                    if (count >= 5) {
+                        audio1.pause();
+                        audio1.remove();
+                        sound1.load();
+                        sound1.play();
+                        sound2.load();
+                        sound2.play();
                         navigate("/membaca/finish");
                     }
                     else {
@@ -63,6 +70,8 @@ export default function Main() {
                         setFruit(fruitName[a]);
                         setFruitImg(fruitListImg[a]);
                         setFruitImgPutus(fruitListImgPutus[a]);
+                        setCount((prevCount) => prevCount + 1);
+                        localStorage.setItem("count", count);      
                     }}}
                     >Next</button>
             </div>

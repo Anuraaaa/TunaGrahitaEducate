@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-export default function Main () {
+export default function Main ({sound1, sound2}) {
     
     const ytlink = [
         "https://www.youtube-nocookie.com/embed/67Kfp2y_Emo",
@@ -20,8 +20,10 @@ export default function Main () {
 
     const [isYtLink, setYtLink] = useState([]);
     const [isTitle, setTitle] = useState([]);
-    const [currentState, setCurrentState] = useState();
     const navigate = useNavigate();
+    localStorage.clear();
+    const storageCount = Number(localStorage.getItem("count")) ?? 0;
+    const [count, setCount] = useState(storageCount);
 
     const randomUniqueNumber = (range, count) => {
         let nums = new Set();
@@ -34,7 +36,6 @@ export default function Main () {
     useEffect(() => {
         setTimeout(function() {
             let a = Math.floor(Math.random() * 9);
-            setCurrentState(a);
             setYtLink(ytlink[a]);
             setTitle(titleyt[a]);
         }, 1)
@@ -47,14 +48,20 @@ export default function Main () {
                 <div className="gamemenyanyi-wrapper">
                     <iframe src={isYtLink} title={isTitle}></iframe>
                 </div>
-                <button onClick={() => {
-                    if(currentState >= 8) {
+                <button className="animation-bounce" onClick={() => {
+                    if(count >= 9) {
+                        sound1.load();
+                        sound1.play();
+                        sound2.load();
+                        sound2.play();
                         navigate("/menyanyimenari/finish");
                     }
                     else {
                         let a = randomUniqueNumber(9, 9);
                         setYtLink(ytlink[a]);
                         setTitle(titleyt[a]); 
+                        setCount((prevCount) => prevCount + 1);
+                        localStorage.setItem("count", count);      
                     }
 
                 }}>Next</button>

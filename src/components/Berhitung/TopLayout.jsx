@@ -10,7 +10,7 @@ export default function TopLayout () {
                     <h1>Selamat Datang di materi Berhitung</h1>
                     <p>Mari berhitung sambil mengenal buah-buahan!</p>
                     <Link to={"/berhitung/game"}>
-                        <button className='btn'>Mulai</button>
+                        <button className='btn animation-bouncetobtm'>Mulai</button>
                     </Link>
                 </div>
                 <img src={calculer} alt="" className='toplayout-img' />

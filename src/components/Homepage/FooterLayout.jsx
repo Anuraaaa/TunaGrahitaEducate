@@ -8,15 +8,15 @@ export default function FooterLayout({materi}) {
         <div className="footerlayout" ref={materi}>
             <h1>Materi</h1>
             <div className="materi-container">
-                <Link className="rounded1" to={"/membaca"} onClick={() => {window.scrollTo(0, 0)}}>
+                <Link className="rounded1 animation-bounce" to={"/membaca"} onClick={() => {window.scrollTo(0, 0)}}>
                     <img src={book} alt="" />
                     <p>Membaca</p>
                 </Link>
-                <Link className="rounded2" to={"/menyanyimenari"} onClick={() => {window.scrollTo(0, 0)}}>
+                <Link className="rounded2 animation-bounce" to={"/menyanyimenari"} onClick={() => {window.scrollTo(0, 0)}}>
                     <img src={singer} alt="" />
                     <p>Bernyanyi dan Menari</p>
                 </Link>
-                <Link className="rounded3" to={"/berhitung"} onClick={() => {window.scrollTo(0, 0)}}>
+                <Link className="rounded3 animation-bounce" to={"/berhitung"} onClick={() => {window.scrollTo(0, 0)}}>
                     <img src={calculer} alt="" />
                     <p>Berhitung</p>
                 </Link>
