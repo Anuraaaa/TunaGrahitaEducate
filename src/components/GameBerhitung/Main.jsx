@@ -13,10 +13,9 @@ export default function Main ({sound1, sound2}) {
     const [image, setImage] = useState([]);
     const [type, setType] = useState([]);
     localStorage.clear();
-    const step = Number(localStorage.getItem("buttonStep")) ?? 0;
-    let buttonStep = step;
-    const levelStep = Number(localStorage.getItem("levelMainStep")) ?? 0;
-    let levelMainStep = levelStep;
+    let buttonStep = Number(localStorage.getItem("buttonStep")) ?? 0;
+    let levelMainStep = Number(localStorage.getItem("levelMainStep")) ?? 0;
+    let buttonAnswerStep = Number(localStorage.getItem("buttonAnswerStep")) ?? 0;
 
     const listImg = [apple, banana, purple, mango, ceri];
     const listAnswer = [7, 6, 4, 5, 4];
@@ -42,17 +41,20 @@ export default function Main ({sound1, sound2}) {
                     <div className="gameberhitung-wrapper-text">
                         <h1>{question}</h1>
                         <button className="animation-bouncetobtm" id={`btn${type}`} onClick={() => {
-                            document.getElementById(`btn${type}`).textContent = answer;
+                            if (buttonAnswerStep >= answer) {
+                                document.getElementById(`btn${type}`).textContent = answer;
+                                buttonStep++;
+                            }
                         }}>Jawab</button>
                     </div>
                     <div className="gameberhitung-img animation-translateX">
-                        <img src={image} alt="" id={`${type}1`} onClick={() => {document.getElementById(`${type}1`).style.opacity = 0.5; document.getElementById(`${type}1`).style.animation = "bounce 1s"; buttonStep++;}}/>
-                        <img src={image} alt="" id={`${type}2`} onClick={() => {document.getElementById(`${type}2`).style.opacity = 0.5; document.getElementById(`${type}2`).style.animation = "bounce 1s"; buttonStep++;}}/>
-                        <img src={image} alt="" id={`${type}3`} onClick={() => {document.getElementById(`${type}3`).style.opacity = 0.5; document.getElementById(`${type}3`).style.animation = "bounce 1s"; buttonStep++;}}/>
-                        <img src={image} alt="" id={`${type}4`} onClick={() => {document.getElementById(`${type}4`).style.opacity = 0.5; document.getElementById(`${type}4`).style.animation = "bounce 1s"; buttonStep++;}}/>
-                        <img src={image} alt="" id={`${type}5`} onClick={() => {document.getElementById(`${type}5`).style.opacity = 0.5; document.getElementById(`${type}5`).style.animation = "bounce 1s"; buttonStep++;}}/>
-                        <img src={image} alt="" id={`${type}6`} onClick={() => {document.getElementById(`${type}6`).style.opacity = 0.5; document.getElementById(`${type}6`).style.animation = "bounce 1s"; buttonStep++;}}/>
-                        <img src={image} alt="" id={`${type}7`} onClick={() => {document.getElementById(`${type}7`).style.opacity = 0.5; document.getElementById(`${type}7`).style.animation = "bounce 1s"; buttonStep++;}}/>
+                        <img src={image} alt="" id={`${type}1`} onClick={() => {document.getElementById(`${type}1`).style.opacity = 0.5; document.getElementById(`${type}1`).style.animation = "bounce 1s"; buttonAnswerStep++;}}/>
+                        <img src={image} alt="" id={`${type}2`} onClick={() => {document.getElementById(`${type}2`).style.opacity = 0.5; document.getElementById(`${type}2`).style.animation = "bounce 1s"; buttonAnswerStep++;}}/>
+                        <img src={image} alt="" id={`${type}3`} onClick={() => {document.getElementById(`${type}3`).style.opacity = 0.5; document.getElementById(`${type}3`).style.animation = "bounce 1s"; buttonAnswerStep++;}}/>
+                        <img src={image} alt="" id={`${type}4`} onClick={() => {document.getElementById(`${type}4`).style.opacity = 0.5; document.getElementById(`${type}4`).style.animation = "bounce 1s"; buttonAnswerStep++;}}/>
+                        <img src={image} alt="" id={`${type}5`} onClick={() => {document.getElementById(`${type}5`).style.opacity = 0.5; document.getElementById(`${type}5`).style.animation = "bounce 1s"; buttonAnswerStep++;}}/>
+                        <img src={image} alt="" id={`${type}6`} onClick={() => {document.getElementById(`${type}6`).style.opacity = 0.5; document.getElementById(`${type}6`).style.animation = "bounce 1s"; buttonAnswerStep++;}}/>
+                        <img src={image} alt="" id={`${type}7`} onClick={() => {document.getElementById(`${type}7`).style.opacity = 0.5; document.getElementById(`${type}7`).style.animation = "bounce 1s"; buttonAnswerStep++;}}/>
                     </div>
                 </>
             )            
@@ -63,17 +65,19 @@ export default function Main ({sound1, sound2}) {
                     <div className="gameberhitung-wrapper-text">
                         <h1>{question}</h1>
                         <button className="animation-bouncetobtm" id={`btn${type}`} onClick={() => {
-                            document.getElementById(`btn${type}`).textContent = answer;
-                            
+                            if (buttonAnswerStep >= answer) {
+                                document.getElementById(`btn${type}`).textContent = answer;
+                                buttonStep++;
+                            }
                         }}>Jawab</button>
                     </div>
                     <div className="gameberhitung-img animation-translateX">
-                        <img src={image} alt="" id={`${type}1`} onClick={() => {document.getElementById(`${type}1`).style.opacity = 0.5; document.getElementById(`${type}1`).style.animation = "bounce 1s"; buttonStep++;}}/>
-                        <img src={image} alt="" id={`${type}2`} onClick={() => {document.getElementById(`${type}2`).style.opacity = 0.5; document.getElementById(`${type}2`).style.animation = "bounce 1s"; buttonStep++;}}/>
-                        <img src={image} alt="" id={`${type}3`} onClick={() => {document.getElementById(`${type}3`).style.opacity = 0.5; document.getElementById(`${type}3`).style.animation = "bounce 1s"; buttonStep++;}}/>
-                        <img src={image} alt="" id={`${type}4`} onClick={() => {document.getElementById(`${type}4`).style.opacity = 0.5; document.getElementById(`${type}4`).style.animation = "bounce 1s"; buttonStep++;}}/>
-                        <img src={image} alt="" id={`${type}5`} onClick={() => {document.getElementById(`${type}5`).style.opacity = 0.5; document.getElementById(`${type}5`).style.animation = "bounce 1s"; buttonStep++;}}/>
-                        <img src={image} alt="" id={`${type}6`} onClick={() => {document.getElementById(`${type}6`).style.opacity = 0.5; document.getElementById(`${type}6`).style.animation = "bounce 1s"; buttonStep++;}}/>
+                        <img src={image} alt="" id={`${type}1`} onClick={() => {document.getElementById(`${type}1`).style.opacity = 0.5; document.getElementById(`${type}1`).style.animation = "bounce 1s"; buttonAnswerStep++;}}/>
+                        <img src={image} alt="" id={`${type}2`} onClick={() => {document.getElementById(`${type}2`).style.opacity = 0.5; document.getElementById(`${type}2`).style.animation = "bounce 1s"; buttonAnswerStep++;}}/>
+                        <img src={image} alt="" id={`${type}3`} onClick={() => {document.getElementById(`${type}3`).style.opacity = 0.5; document.getElementById(`${type}3`).style.animation = "bounce 1s"; buttonAnswerStep++;}}/>
+                        <img src={image} alt="" id={`${type}4`} onClick={() => {document.getElementById(`${type}4`).style.opacity = 0.5; document.getElementById(`${type}4`).style.animation = "bounce 1s"; buttonAnswerStep++;}}/>
+                        <img src={image} alt="" id={`${type}5`} onClick={() => {document.getElementById(`${type}5`).style.opacity = 0.5; document.getElementById(`${type}5`).style.animation = "bounce 1s"; buttonAnswerStep++;}}/>
+                        <img src={image} alt="" id={`${type}6`} onClick={() => {document.getElementById(`${type}6`).style.opacity = 0.5; document.getElementById(`${type}6`).style.animation = "bounce 1s"; buttonAnswerStep++;}}/>
                     </div>
                 </>
             )
@@ -84,15 +88,17 @@ export default function Main ({sound1, sound2}) {
                     <div className="gameberhitung-wrapper-text">
                         <h1>{question}</h1>
                         <button className="animation-bouncetobtm" id={`btn${type}`} onClick={() => {
-                            document.getElementById(`btn${type}`).textContent = answer;
-                            
+                            if (buttonAnswerStep >= answer) {
+                                document.getElementById(`btn${type}`).textContent = answer;
+                                buttonStep++;
+                            }
                         }}>Jawab</button>
                     </div>
                     <div className="gameberhitung-img animation-translateX">
-                        <img src={image} alt="" id={`${type}1`} onClick={() => {document.getElementById(`${type}1`).style.opacity = 0.5; document.getElementById(`${type}1`).style.animation = "bounce 1s"; buttonStep++;}}/>
-                        <img src={image} alt="" id={`${type}2`} onClick={() => {document.getElementById(`${type}2`).style.opacity = 0.5; document.getElementById(`${type}2`).style.animation = "bounce 1s"; buttonStep++;}}/>
-                        <img src={image} alt="" id={`${type}3`} onClick={() => {document.getElementById(`${type}3`).style.opacity = 0.5; document.getElementById(`${type}3`).style.animation = "bounce 1s"; buttonStep++;}}/>
-                        <img src={image} alt="" id={`${type}4`} onClick={() => {document.getElementById(`${type}4`).style.opacity = 0.5; document.getElementById(`${type}4`).style.animation = "bounce 1s"; buttonStep++;}}/>
+                        <img src={image} alt="" id={`${type}1`} onClick={() => {document.getElementById(`${type}1`).style.opacity = 0.5; document.getElementById(`${type}1`).style.animation = "bounce 1s"; buttonAnswerStep++;}}/>
+                        <img src={image} alt="" id={`${type}2`} onClick={() => {document.getElementById(`${type}2`).style.opacity = 0.5; document.getElementById(`${type}2`).style.animation = "bounce 1s"; buttonAnswerStep++;}}/>
+                        <img src={image} alt="" id={`${type}3`} onClick={() => {document.getElementById(`${type}3`).style.opacity = 0.5; document.getElementById(`${type}3`).style.animation = "bounce 1s"; buttonAnswerStep++;}}/>
+                        <img src={image} alt="" id={`${type}4`} onClick={() => {document.getElementById(`${type}4`).style.opacity = 0.5; document.getElementById(`${type}4`).style.animation = "bounce 1s"; buttonAnswerStep++;}}/>
                     </div>
                 </>
             )
@@ -103,16 +109,18 @@ export default function Main ({sound1, sound2}) {
                     <div className="gameberhitung-wrapper-text">
                         <h1>{question}</h1>
                         <button className="animation-bouncetobtm" id={`btn${type}`} onClick={() => {
-                            document.getElementById(`btn${type}`).textContent = answer;
-                            
+                            if (buttonAnswerStep >= answer) {
+                                document.getElementById(`btn${type}`).textContent = answer;
+                                buttonStep++;
+                            }
                         }}>Jawab</button>
                     </div>
                     <div className="gameberhitung-img animation-translateX">
-                        <img src={image} alt="" id={`${type}1`} onClick={() => {document.getElementById(`${type}1`).style.opacity = 0.5; document.getElementById(`${type}1`).style.animation = "bounce 1s"; buttonStep++;}}/>
-                        <img src={image} alt="" id={`${type}2`} onClick={() => {document.getElementById(`${type}2`).style.opacity = 0.5; document.getElementById(`${type}2`).style.animation = "bounce 1s"; buttonStep++;}}/>
-                        <img src={image} alt="" id={`${type}3`} onClick={() => {document.getElementById(`${type}3`).style.opacity = 0.5; document.getElementById(`${type}3`).style.animation = "bounce 1s"; buttonStep++;}}/>
-                        <img src={image} alt="" id={`${type}4`} onClick={() => {document.getElementById(`${type}4`).style.opacity = 0.5; document.getElementById(`${type}4`).style.animation = "bounce 1s"; buttonStep++;}}/>
-                        <img src={image} alt="" id={`${type}4`} onClick={() => {document.getElementById(`${type}4`).style.opacity = 0.5; document.getElementById(`${type}4`).style.animation = "bounce 1s"; buttonStep++;}}/>
+                        <img src={image} alt="" id={`${type}1`} onClick={() => {document.getElementById(`${type}1`).style.opacity = 0.5; document.getElementById(`${type}1`).style.animation = "bounce 1s"; buttonAnswerStep++;}}/>
+                        <img src={image} alt="" id={`${type}2`} onClick={() => {document.getElementById(`${type}2`).style.opacity = 0.5; document.getElementById(`${type}2`).style.animation = "bounce 1s"; buttonAnswerStep++;}}/>
+                        <img src={image} alt="" id={`${type}3`} onClick={() => {document.getElementById(`${type}3`).style.opacity = 0.5; document.getElementById(`${type}3`).style.animation = "bounce 1s"; buttonAnswerStep++;}}/>
+                        <img src={image} alt="" id={`${type}4`} onClick={() => {document.getElementById(`${type}4`).style.opacity = 0.5; document.getElementById(`${type}4`).style.animation = "bounce 1s"; buttonAnswerStep++;}}/>
+                        <img src={image} alt="" id={`${type}5`} onClick={() => {document.getElementById(`${type}5`).style.opacity = 0.5; document.getElementById(`${type}5`).style.animation = "bounce 1s"; buttonAnswerStep++;}}/>
                     </div>
                 </>
             )
@@ -123,14 +131,16 @@ export default function Main ({sound1, sound2}) {
                     <div className="gameberhitung-wrapper-text">
                         <h1>{question}</h1>
                         <button className="animation-bouncetobtm" id={`btn${type}`} onClick={() => {
-                            document.getElementById(`btn${type}`).textContent = answer;
-                            
+                            if (buttonAnswerStep >= answer) {
+                                document.getElementById(`btn${type}`).textContent = answer;
+                                buttonStep++;
+                            }
                         }}>Jawab</button>
                     </div>
                     <div className="gameberhitung-img animation-translateX">
-                        <img src={image} alt="" id={`${type}2`} onClick={() => {document.getElementById(`${type}2`).style.opacity = 0.5; document.getElementById(`${type}2`).style.animation = "bounce 1s"; buttonStep++;}}/>
-                        <img src={image} alt="" id={`${type}3`} onClick={() => {document.getElementById(`${type}3`).style.opacity = 0.5; document.getElementById(`${type}3`).style.animation = "bounce 1s"; buttonStep++;}}/>
-                        <img src={image} alt="" id={`${type}4`} onClick={() => {document.getElementById(`${type}4`).style.opacity = 0.5; document.getElementById(`${type}4`).style.animation = "bounce 1s"; buttonStep++;}}/>
+                        <img src={image} alt="" id={`${type}1`} onClick={() => {document.getElementById(`${type}1`).style.opacity = 0.5; document.getElementById(`${type}1`).style.animation = "bounce 1s"; buttonAnswerStep++;}}/>
+                        <img src={image} alt="" id={`${type}2`} onClick={() => {document.getElementById(`${type}2`).style.opacity = 0.5; document.getElementById(`${type}2`).style.animation = "bounce 1s"; buttonAnswerStep++;}}/>
+                        <img src={image} alt="" id={`${type}3`} onClick={() => {document.getElementById(`${type}3`).style.opacity = 0.5; document.getElementById(`${type}3`).style.animation = "bounce 1s"; buttonAnswerStep++;}}/>
                     </div>
                 </>
             )
@@ -144,8 +154,8 @@ export default function Main ({sound1, sound2}) {
                         {RandomGameBerhitung(value)}
                     </div>
                     <button className="animation-bounce btnNextGameberhitung" onClick={() => {
-                        if (buttonStep >= answer) {
-                            if (levelMainStep >= 4) {
+                        if (buttonStep !== 0) {
+                            if (levelMainStep !== 0) {
                                 sound1.load();
                                 sound1.play();
                                 sound2.load();
@@ -159,6 +169,7 @@ export default function Main ({sound1, sound2}) {
                                 setImage(listImg[a]);
                                 setType(listType[a]);
                                 for (let i = 1; i <= answer; i++) {
+                                    document.getElementById(`btn${type}`).textContent = "Jawab";
                                     document.getElementById(`${type}`+i).style.opacity = 1;
                                 }                    
                                 levelMainStep++;
