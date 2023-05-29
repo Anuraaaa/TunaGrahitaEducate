@@ -16,6 +16,7 @@ import srcAudio2 from "./asset/mp3/lagu2.mp3"
 import srcAudio3 from "./asset/mp3/lagu3.mp3"
 import srcSound1 from "./asset/mp3/sound1.mp3"
 import srcSound2 from "./asset/mp3/sound2.mp3"
+import FinishBerhitung from './Pages/FinishBerhitung';
 
 function App() {
 
@@ -50,14 +51,15 @@ return (
     <Router>
       <Routes>
           <Route path='/' element={<Homepage/>}/>
-          <Route path='/membaca' element={<MembacaPage audio1={audio1}/>}/>
-          <Route path='/membaca/game' element={<GameMembaca audio1={audio1} sound1={sound1} sound2={sound2}/>}/>
-          <Route path='/membaca/finish' element={<FinishMembaca/>}/>
+          <Route path='/membaca/' element={<MembacaPage audio1={audio1}/>}/>
+          <Route path='/membaca/game/' element={<GameMembaca audio1={audio1} sound1={sound1} sound2={sound2}/>}/>
+          <Route path='/membaca/finish/' element={<FinishMembaca/>}/>
           <Route path='/menyanyimenari/' element={<MenyanyidanMenari/>}/>
-          <Route path='/menyanyimenari/game' element={<GameMenyanyidanMenari sound1={sound1} sound2={sound2}/>}/>
-          <Route path='/menyanyimenari/finish' element={<FinishMenyanyidanMenari/>}/>
-          <Route path='/berhitung' element={<Berhitung/>}/>
-          <Route path='/berhitung/game' element={<GameBerhitung/>}/>
+          <Route path='/menyanyimenari/game/' element={<GameMenyanyidanMenari sound1={sound1} sound2={sound2}/>}/>
+          <Route path='/menyanyimenari/finish/' element={<FinishMenyanyidanMenari/>}/>
+          <Route path='/berhitung/' element={<Berhitung audio3={audio3}/>}/>
+          <Route path='/berhitung/game/' element={<GameBerhitung sound1={sound1} sound2={sound2}/>}/>
+          <Route path='/berhitung/finish/' element={<FinishBerhitung/>}/>
       </Routes>
     </Router>
   )

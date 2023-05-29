@@ -10,7 +10,7 @@ export default function FooterLayout({materi}) {
             <div className="materi-container">
                 <Link className="rounded1 animation-bounce" to={"/membaca"} onClick={() => {window.scrollTo(0, 0)}}>
                     <img src={book} alt="" />
-                    <p>Membaca</p>
+                    <p>Membaca dan Menulis</p>
                 </Link>
                 <Link className="rounded2 animation-bounce" to={"/menyanyimenari"} onClick={() => {window.scrollTo(0, 0)}}>
                     <img src={singer} alt="" />
