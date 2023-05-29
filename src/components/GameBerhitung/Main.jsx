@@ -18,8 +18,8 @@ export default function Main ({sound1, sound2}) {
     let buttonAnswerStep = Number(localStorage.getItem("buttonAnswerStep")) ?? 0;
 
     const listImg = [apple, banana, purple, mango, ceri];
-    const listAnswer = [7, 6, 4, 5, 4];
-    const listQuestion = ["3 + 4 ?", "2 + 4 ?", "10 - 6 ?", "18 - 13 ?", "1 + 2"];
+    const listAnswer = [7, 6, 4, 5, 3];
+    const listQuestion = ["3 + 4 ?", "2 + 4 ?", "10 - 6 ?", "18 - 13 ?", "1 + 2 ?"];
     const listType = ["apple", "banana", "purple", "mango", "ceri"];
     const navigate = useNavigate();
     
