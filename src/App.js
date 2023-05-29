@@ -58,7 +58,7 @@ return (
           <Route path='/menyanyimenari/game/' element={<GameMenyanyidanMenari sound1={sound1} sound2={sound2}/>}/>
           <Route path='/menyanyimenari/finish/' element={<FinishMenyanyidanMenari/>}/>
           <Route path='/berhitung/' element={<Berhitung audio3={audio3}/>}/>
-          <Route path='/berhitung/game/' element={<GameBerhitung sound1={sound1} sound2={sound2}/>}/>
+          <Route path='/berhitung/game/' element={<GameBerhitung audio3={audio3} sound1={sound1} sound2={sound2}/>}/>
           <Route path='/berhitung/finish/' element={<FinishBerhitung/>}/>
       </Routes>
     </Router>
