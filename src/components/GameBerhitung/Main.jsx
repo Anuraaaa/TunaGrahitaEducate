@@ -158,6 +158,9 @@ export default function Main ({sound1, sound2}) {
                                 setAnswer(listAnswer[a]);
                                 setImage(listImg[a]);
                                 setType(listType[a]);
+                                for (let i = 1; i <= answer; i++) {
+                                    document.getElementById(`${type}`+i).style.opacity = 1;
+                                }                    
                                 levelMainStep++;
                             }
                         }
