@@ -11,7 +11,7 @@ import ceriputus from "../../asset/img/ceriputus.png";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-export default function Main({audio1, sound1, sound2}) {
+export default function Main({audio1, audio2, audio3, sound1, sound2}) {
 
     const fruitName = ["A-p-e-l", "P-i-s-a-n-g", "A-n-g-g-u-r", "M-a-n-g-g-a", "C-e-r-i"];
     const fruitListImg = [appleimg, banana, purple, mango, ceri];
@@ -59,6 +59,14 @@ export default function Main({audio1, sound1, sound2}) {
                     if (count >= 5) {
                         audio1.pause();
                         audio1.remove();
+                        audio2.pause();
+                        audio2.remove();
+                        audio3.pause()
+                        audio3.remove();
+                        sound1.pause();
+                        sound1.remove();
+                        sound2.pause();
+                        sound2.remove();
                         sound1.load();
                         sound1.play();
                         sound2.load();

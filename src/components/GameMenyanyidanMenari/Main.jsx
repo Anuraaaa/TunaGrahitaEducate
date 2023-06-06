@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-export default function Main ({sound1, sound2}) {
+export default function Main ({audio1, audio2, audio3, sound1, sound2}) {
     
     const ytlink = [
         "https://www.youtube-nocookie.com/embed/67Kfp2y_Emo",
@@ -50,6 +50,16 @@ export default function Main ({sound1, sound2}) {
                 </div>
                 <button className="animation-bounce" onClick={() => {
                     if(count >= 9) {
+                        audio1.pause();
+                        audio1.remove();
+                        audio2.pause();
+                        audio2.remove();
+                        audio3.pause()
+                        audio3.remove();
+                        sound1.pause();
+                        sound1.remove();
+                        sound2.pause();
+                        sound2.remove();
                         sound1.load();
                         sound1.play();
                         sound2.load();
