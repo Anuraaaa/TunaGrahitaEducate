@@ -23,26 +23,21 @@ function App() {
   const audio1 = new Audio();
   audio1.load();
   audio1.src = srcAudio1;
-  audio1.autoplay = true;
   audio1.loop = true;
   const audio2 = new Audio();
   audio2.load();
   audio2.src = srcAudio2;
-  audio2.autoplay = true;
   audio2.loop = true;
   const audio3 = new Audio();
   audio3.load();
   audio3.src = srcAudio3;
-  audio3.autoplay = true;
   audio3.loop = true;
   const sound1 = new Audio();
   sound1.load();
   sound1.src = srcSound1;
-  sound1.autoplay = true;
   const sound2 = new Audio();
   sound2.load();
   sound2.src = srcSound2;
-  sound2.autoplay = true;
 
   useEffect(() => {
     window.scrollTo(0,0);
